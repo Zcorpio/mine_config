@@ -1,0 +1,14 @@
+/bootloader	vfat	/dev/block/by-name/bootloader
+/env		emmc	/dev/block/by-name/env
+/boot		emmc	/dev/block/by-name/boot
+/system		ext4	/dev/block/by-name/system
+/data		ext4	/dev/block/by-name/UDISK
+/misc		emmc	/dev/block/by-name/misc
+/recovery	emmc	/dev/block/by-name/recovery
+/cache		ext4 	/dev/block/by-name/cache
+/extsd		vfat	/dev/block/mmcblk0p1
+/extsd		vfat	/dev/block/mmcblk1
+/extsd		vfat	/dev/block/mmcblk1p1
+/extsd		vfat	/dev/block/mmcblk0
+/usbhost	vfat	/dev/block/sda1
+/usbhost	vfat	/dev/block/sda

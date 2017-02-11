@@ -1,0 +1,43 @@
+# Platform
+TARGET_BOARD_PLATFORM := astar
+
+# Architecture
+TARGET_ARCH := arm
+TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_SMP := true
+TARGET_CPU_VARIANT := cortex-a7
+
+# Bootloader
+TARGET_NO_BOOTLOADER := true
+TARGET_BOOTLOADER_BOARD_NAME := astar
+
+# Kernel
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
+BOARD_KERNEL_CMDLINE := console=ttyS0,115200 rw init=/init loglevel=4 androidboot.selinux=permissive
+BOARD_KERNEL_BASE := 0x40000000
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x*01000000 --tags_offset 0x00000100
+
+# Partitions
+BOARD_FLASH_BLOCK_SIZE := 4096
+BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 33554432
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1073741824
+BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
+#BOARD_USERDATAIMAGE_PARTITION_SIZE := 
+
+# Recovery
+TW_THEME := landscape_mdpi
+RECOVERY_SDCARD_ON_DATA := true
+TW_NO_BATT_PERCENT := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
+TW_EXTERNAL_STORAGE_PATH := "/extsd"
+TWHAVE_SELINUX := false
+#BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
+#BOARD_UMS_2ND_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun1/file"
+#TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/twrp.fstab
+BOARD_HAS_NO_SELECT_BUTTON := true
+TW_BRIGHTNESS_PATH := /sys/class/disp/disp/attr/lcd_bl
+TW_MAX_BRIGHTNESS := 255
